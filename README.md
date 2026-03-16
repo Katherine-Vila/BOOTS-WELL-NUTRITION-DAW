@@ -47,7 +47,9 @@ Diseñar una plataforma web que permita visualizar productos saludables y simula
 ## 🎓 Información Académica
 
 **Asignatura:** Desarrollo de Aplicaciones Web con Software Interpretado en el Cliente
+
 **Docente:** Ing. Néstor Stanley Rivas Díaz
+
 **Universidad:** Universidad Don Bosco
 
 ---
