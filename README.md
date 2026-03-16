@@ -3,70 +3,64 @@
 
 # 🥗 BOOST WELL NUTRITION
 
-### Plataforma Web para la Gestión y Visualización de Productos Saludables
+<p align="center">
+Proyecto académico de plataforma web para la visualización y gestión de productos saludables.
+</p>
 
 ---
 
-## 📌 Descripción del Proyecto
+## 📖 Descripción
 
-**BOOST WELL NUTRITION** es una propuesta de plataforma web orientada a la visualización y gestión de productos saludables, como bebidas funcionales y postres nutritivos.
+**BOOST WELL NUTRITION** es un proyecto académico que propone el desarrollo de una plataforma web orientada a la visualización de productos saludables, como bebidas funcionales y postres nutritivos.
 
-El objetivo del proyecto es ofrecer a los usuarios una experiencia digital donde puedan explorar un catálogo de productos, conocer sus beneficios nutricionales y simular un proceso de compra dentro de una interfaz clara, moderna e interactiva.
+El objetivo del sistema es permitir que los usuarios exploren un catálogo de productos, conozcan sus beneficios nutricionales y simulen una experiencia de compra dentro de una interfaz clara y fácil de usar.
 
-Esta primera fase del proyecto corresponde a la **planificación, diseño y documentación del sistema**, donde se define la estructura general de la aplicación y la estrategia de desarrollo.
-
----
-
-## 🎯 Objetivo General
-
-Diseñar una aplicación web que permita a los usuarios visualizar productos saludables, gestionar un carrito de compras y simular un proceso de compra dentro de una plataforma digital interactiva.
+Actualmente el proyecto se encuentra en **fase de diseño y documentación**, donde se define la estructura general del sistema, su planificación y los elementos visuales de la aplicación.
 
 ---
 
-## 📋 Objetivos Específicos
+## 🎯 Objetivo del Proyecto
 
-* Diseñar la estructura general de la aplicación web.
-* Elaborar mockups de la interfaz de usuario.
-* Definir los diagramas UML del sistema.
-* Planificar la arquitectura del proyecto.
-* Documentar la gestión y organización del desarrollo.
+Diseñar una plataforma web que permita a los usuarios visualizar productos saludables y simular un proceso de compra dentro de un entorno interactivo.
 
 ---
 
-## 🧩 Contenido de la Primera Fase
+## 🧩 Contenido de la Fase 1
 
-Durante esta fase se desarrolló la **documentación inicial del proyecto**, la cual incluye:
+En esta fase se desarrolló la **documentación inicial del proyecto**, que incluye:
 
-✨ Descripción del proyecto
-✨ Objetivos del sistema
-✨ Gestión integral del proyecto
-✨ Diseño de la aplicación (Mockups UX/UI)
-✨ Diagramas UML
-✨ Arquitectura propuesta
-✨ Planificación del desarrollo
-✨ Resultados esperados
+* Descripción del proyecto
+* Objetivo general y objetivos específicos
+* Gestión del proyecto
+* Diseño de la aplicación
+* Mockups UX/UI
+* Diagramas UML
+* Arquitectura propuesta
+* Planificación del desarrollo
 
 ---
 
 ## 🛠 Herramientas Utilizadas
 
-🎨 **Figma** – Diseño de interfaces y mockups
-📊 **Draw.io** – Elaboración de diagramas UML
-📋 **Trello** – Gestión y seguimiento del proyecto
-💻 **GitHub** – Repositorio y control de versiones
+| Herramienta | Uso                  |
+| ----------- | -------------------- |
+| Figma       | Diseño de interfaces |
+| Draw.io     | Diagramas UML        |
+| Trello      | Gestión del proyecto |
+| GitHub      | Repositorio          |
 
 ---
 
 ## 🔗 Enlaces del Proyecto
 
-📋 **Tablero de Gestión (Trello)**
-👉 *(https://trello.com/invite/b/69b0e24bd03628e307762077/ATTIb0afe881d40f243efc02114840ce118dBB771139/proyecto-daw-boots-well-nutrition)*
+📋 **Tablero Trello**
+🔗 Agregar enlace aquí
 
-🎨 **Diseño UX/UI (Figma)**
-👉 *(https://www.figma.com/proto/ktA3lq1eS2GtTA2jvLAase/Proyecto-DAW----Tel--Te%C3%B3rica?page-id=0%3A1&node-id=149-2003&viewport=86%2C-2910%2C0.5&t=okTnL1Otpz2Yx6GU-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=149%3A2001)*
+🎨 **Diseño en Figma**
+🔗 Agregar enlace aquí
 
-💻 **Repositorio del Proyecto (GitHub)**
-👉 *(Agregar enlace aquí)*
+💻 **Repositorio GitHub**
+🔗 Agregar enlace aquí
 
 ---
 
@@ -80,24 +74,20 @@ Coordinadora y desarrolladora del proyecto.
 ## 🎓 Información Académica
 
 **Asignatura:**
-Desarrollo de Aplicaciones Web con Software Interpretado en el Cliente (DAW404)
+Desarrollo de Aplicaciones Web con Software Interpretado en el Cliente
 
 **Docente:**
 Ing. Néstor Stanley Rivas Díaz
 
 **Institución:**
-Universidad Don Bosco – Facultad de Ingeniería
+Universidad Don Bosco
 
 ---
 
 ## 🚧 Estado del Proyecto
 
-📍 **Fase actual:** Documentación y diseño del sistema
+📌 **Fase actual:** Diseño y documentación del sistema.
 
-En la siguiente fase se realizará el **desarrollo e implementación funcional de la aplicación web**.
-
----
-
-✨ *Proyecto académico desarrollado como parte del curso de Desarrollo de Aplicaciones Web.*
+En la siguiente fase se desarrollará la implementación funcional de la aplicación web.
 
 ---
