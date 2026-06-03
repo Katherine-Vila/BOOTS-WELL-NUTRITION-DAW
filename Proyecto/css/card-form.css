@@ -1,0 +1,51 @@
+/* Estilos para formulario de tarjeta */
+.card-form-container {
+    background: #f8f9fa;
+    border: 2px solid #dee2e6;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.card-form-container .form-control {
+    border: 2px solid #ced4da;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.card-form-container .form-control:focus {
+    border-color: #4a7c59;
+    box-shadow: 0 0 0 0.2rem rgba(74, 124, 89, 0.25);
+}
+
+.card-form-container .form-label {
+    font-weight: 600;
+    color: #2d5a3d;
+    margin-bottom: 8px;
+}
+
+.card-form-container small {
+    display: block;
+    margin-top: 5px;
+    color: #6c757d;
+}
+
+#cardNumber {
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+#cardName {
+    text-transform: uppercase;
+}
+
+#cardExpiry, #cardCVV {
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+}
+
+
+

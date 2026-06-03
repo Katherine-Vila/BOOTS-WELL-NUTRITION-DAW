@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rastrea tu pedido de BOOST WELL NUTRITION">
+    <title>Seguimiento de Pedido - BOOST WELL NUTRITION</title>
+    
+    <!-- Icono de la página -->
+    <link rel="icon" type="image/png" href="img/LOGO-sin fondo.png">
+    
+    <!-- CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/Styles.css">
+</head>
+<body>
+    
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/LOGO-sin fondo.png" alt="BOOST WELL NUTRITION Logo" class="logo-image">
+                <div class="brand-text">
+                    <span class="brand-name">BOOST WELL</span>
+                    <span class="brand-subtitle">NUTRITION</span>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Ver Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="seguimiento.html">Seguimiento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reclamaciones.html">Reclamaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                
+                <div class="nav-icons">
+                    <a href="carrito.html" class="icon-link">
+                        <i class="bi bi-cart3"></i>
+                        <span class="cart-badge" id="cartCount">0</span>
+                    </a>
+                    <a href="cuenta.html" class="icon-link">
+                        <i class="bi bi-person"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de seguimiento -->
+    <section class="tracking-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Encabezado -->
+                    <div class="tracking-header text-center mb-5">
+                        <div class="tracking-icon">
+                            <i class="bi bi-box-seam"></i>
+                        </div>
+                        <h1 class="tracking-title">Seguimiento de Pedido</h1>
+                        <p class="tracking-subtitle">
+                            Ingresa tu número de pedido para conocer el estado de tu orden
+                        </p>
+                    </div>
+
+                    <!-- Formulario de búsqueda -->
+                    <div class="tracking-search-card">
+                        <form id="trackingForm" class="tracking-form">
+                            <div class="row g-3">
+                                <div class="col-md-8">
+                                    <label class="form-label">Número de Pedido</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="bi bi-hash"></i>
+                                        </span>
+                                        <input 
+                                            type="text" 
+                                            class="form-control" 
+                                            id="orderNumber" 
+                                            placeholder="Ej: BWN20251023001"
+                                            required
+                                        >
+                                    </div>
+                                    <small class="form-text text-muted">
+                                        Lo encontrarás en tu correo de confirmación
+                                    </small>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">&nbsp;</label>
+                                    <button type="submit" class="btn btn-primary-custom w-100">
+                                        <i class="bi bi-search"></i> Rastrear
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Estado del pedido (Oculto inicialmente) -->
+                    <div id="orderStatus" class="order-status-card" style="display: none;">
+                        <!-- Encabezado de información del pedido -->
+                        <div class="order-info-header">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <h3 class="order-number-display">Pedido #<span id="displayOrderNumber"></span></h3>
+                                    <p class="order-date">Realizado el <span id="orderDate"></span></p>
+                                </div>
+                                <div class="col-md-6 text-md-end">
+                                    <span class="order-status-badge" id="orderStatusBadge"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rastreador de progreso -->
+                        <div class="progress-tracker">
+                            <div class="progress-step completed" id="step1">
+                                <div class="step-icon">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <div class="step-info">
+                                    <h5>Pedido Recibido</h5>
+                                    <p class="step-time" id="step1Time"></p>
+                                </div>
+                            </div>
+
+                            <div class="progress-line" id="line1"></div>
+
+                            <div class="progress-step" id="step2">
+                                <div class="step-icon">
+                                    <i class="bi bi-hourglass-split"></i>
+                                </div>
+                                <div class="step-info">
+                                    <h5>En Preparación</h5>
+                                    <p class="step-time" id="step2Time"></p>
+                                </div>
+                            </div>
+
+                            <div class="progress-line" id="line2"></div>
+
+                            <div class="progress-step" id="step3">
+                                <div class="step-icon">
+                                    <i class="bi bi-truck"></i>
+                                </div>
+                                <div class="step-info">
+                                    <h5>En Camino</h5>
+                                    <p class="step-time" id="step3Time"></p>
+                                </div>
+                            </div>
+
+                            <div class="progress-line" id="line3"></div>
+
+                            <div class="progress-step" id="step4">
+                                <div class="step-icon">
+                                    <i class="bi bi-house-check"></i>
+                                </div>
+                                <div class="step-info">
+                                    <h5>Entregado</h5>
+                                    <p class="step-time" id="step4Time"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Detalles del pedido -->
+                        <div class="order-details">
+                            <h4>Detalles del Pedido</h4>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="detail-item">
+                                        <i class="bi bi-person"></i>
+                                        <div>
+                                            <strong>Cliente:</strong>
+                                            <p id="customerName"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="detail-item">
+                                        <i class="bi bi-telephone"></i>
+                                        <div>
+                                            <strong>Teléfono:</strong>
+                                            <p id="customerPhone"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="detail-item">
+                                        <i class="bi bi-geo-alt"></i>
+                                        <div>
+                                            <strong>Dirección de Entrega:</strong>
+                                            <p id="deliveryAddress"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Artículos del pedido -->
+                        <div class="order-items">
+                            <h4>Productos</h4>
+                            <div id="orderItemsList"></div>
+                        </div>
+
+                        <!-- Total del pedido -->
+                        <div class="order-total">
+                            <div class="row">
+                                <div class="col-6">
+                                    <strong>Total del Pedido:</strong>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <h4 class="total-amount" id="orderTotal">$0.00</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Acciones -->
+                        <div class="order-actions">
+                            <button class="btn btn-outline-success" onclick="downloadInvoice()">
+                                <i class="bi bi-file-earmark-pdf"></i> Descargar Factura
+                            </button>
+                            <button class="btn btn-outline-primary" onclick="shareOrder()">
+                                <i class="bi bi-share"></i> Compartir
+                            </button>
+                            <button class="btn btn-primary-custom" onclick="window.location.href='reclamaciones.html'">
+                                <i class="bi bi-exclamation-triangle"></i> Reportar Problema
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Sección de ayuda -->
+                    <div class="tracking-help">
+                        <h4><i class="bi bi-question-circle"></i> ¿Necesitas Ayuda?</h4>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="help-card">
+                                    <div>
+                                        <h5>WhatsApp</h5>
+                                        <p>Chatea con nosotros</p>
+                                        <a href="https://wa.me/50374753562" target="_blank" class="btn-help-whatsapp">
+                                            <i class="bi bi-whatsapp"></i> +503 7475-3562
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="help-card">
+                                    <div>
+                                        <h5>Email</h5>
+                                        <p>Envíanos un correo</p>
+                                        <a href="mailto:flower.89045@gmail.com" class="btn-help-email">
+                                            <i class="bi bi-envelope"></i> Enviar Email
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de preguntas frecuentes -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h3 class="text-center mb-4">Preguntas Frecuentes</h3>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    ¿Dónde encuentro mi número de pedido?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Tu número de pedido se encuentra en el correo de confirmación que te enviamos 
+                                    después de realizar tu compra. Tiene el formato: BWN20251023001
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    ¿Cuánto tarda la entrega?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Las entregas en Antiguo Cuscatlán y zonas cercanas se realizan en 30-45 minutos. 
+                                    Para otras zonas del área metropolitana, el tiempo puede variar entre 45-60 minutos.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    ¿Puedo cambiar la dirección de entrega?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sí, puedes cambiar la dirección mientras tu pedido esté en estado "En Preparación". 
+                                    Contáctanos por WhatsApp al +503 7475-3562.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    ¿Qué hago si hay un problema con mi pedido?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Si hay algún problema con tu pedido, puedes hacer clic en "Reportar Problema" 
+                                    o visitarnos en nuestra <a href="reclamaciones.html">página de reclamaciones</a>.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="footer-brand">
+                        <img src="img/LOGO-sin fondo.png" alt="BOOST WELL NUTRITION Logo" class="footer-logo">
+                        <div class="brand-text">
+                            <span class="brand-name">BOOST WELL</span>
+                            <span class="brand-subtitle">NUTRITION</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Transformando ingredientes naturales en deliciosas bebidas y alimentos saludables.
+                    </p>
+                    <div class="footer-stats">
+                        <div class="stat-item">
+                            <h4>500+</h4>
+                            <p>Clientes Felices</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>15+</h4>
+                            <p>Productos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Enlaces Rápidos</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Ver Productos</a></li>
+                        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="Contacto.html">Contacto</a></li>
+                        <li><a href="seguimiento.html">Rastrear Pedido</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Contacto</h5>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-geo-alt"></i> Antiguo Cuscatlán, La Libertad, El Salvador</li>
+                        <li><i class="bi bi-whatsapp"></i> +503 7475-3562</li>
+                        <li><i class="bi bi-envelope"></i> flower.89045@gmail.com</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://wa.me/50374753562" target="_blank" title="Contáctanos por WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="footer-copyright">
+                        &copy; 2025 BOOST WELL NUTRITION. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- jsPDF para generación de PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <!-- JavaScript personalizado -->
+    <script src="js/script.js"></script>
+    <script src="js/tracking.js"></script>
+
+    <!-- jQuery Enhancements -->
+    <script src="js/jquery-enhancements.js"></script>
+</body>
+</html>
+
+
+
