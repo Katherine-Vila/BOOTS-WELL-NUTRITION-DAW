@@ -71,56 +71,61 @@
 
     <!-- Account Section -->
     <section class="account-section">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="account-card">
-                        <h2 class="account-title">¿Ya estás registrado?</h2>
-                        <p class="account-description">
-                            Si ya tienes una cuenta registrada, ingresa con tu usuario y contraseña.
-                        </p>
-                        
-                        <form class="account-form">
-                            <div class="mb-3">
-                                <label class="form-label">Usuario</label>
-                                <input type="text" class="form-control" required>
-                            </div>
+        <div id="loginSection">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="account-card">
+                            <h2 class="account-title">¿Ya estás registrado?</h2>
+                            <p class="account-description">
+                                Si ya tienes una cuenta registrada, ingresa con tu correo y contraseña.
+                            </p>
                             
-                            <div class="mb-3">
-                                <label class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" required>
-                            </div>
-                            
-                            <div class="form-check mb-4">
-                                <input class="form-check-input" type="checkbox" id="rememberMe">
-                                <label class="form-check-label" for="rememberMe">
-                                    Recuérdame
-                                </label>
-                            </div>
-                            
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="#" class="forgot-link">¿Olvidaste la contraseña?</a>
-                                <button type="submit" class="btn btn-secondary-custom">Ingresar</button>
-                            </div>
-                        </form>
+                            <form class="account-form" id="loginForm" onsubmit="iniciarSesion(event)">
+                                <div class="mb-3">
+                                    <label class="form-label">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="loginEmail" placeholder="tu@email.com" required>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="loginPassword" placeholder="Tu contraseña" required>
+                                </div>
+                                
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">
+                                        Recuérdame
+                                    </label>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="#" class="forgot-link">¿Olvidaste la contraseña?</a>
+                                    <button type="submit" class="btn btn-secondary-custom">Ingresar</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="col-lg-6">
-                    <div class="account-card">
-                        <h2 class="account-title">¿Aún no tienes cuenta?</h2>
-                        <p class="account-description">
-                            Crear una cuenta tiene muchos beneficios como comprar más rápido, guardar tus preferencias, 
-                            rastrear tus pedidos y más.
-                        </p>
-                        
-                        <div class="text-center mt-5">
-                            <a href="registro.html" class="btn btn-primary-custom">Crear una Cuenta</a>
+                    
+                    <div class="col-lg-6">
+                        <div class="account-card">
+                            <h2 class="account-title">¿Aún no tienes cuenta?</h2>
+                            <p class="account-description">
+                                Crear una cuenta tiene muchos beneficios como comprar más rápido, guardar tus preferencias, 
+                                rastrear tus pedidos y más.
+                            </p>
+                            
+                            <div class="text-center mt-5">
+                                <a href="registro.html" class="btn btn-primary-custom">Crear una Cuenta</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Perfil del usuario (se muestra cuando está logueado) -->
+        <div id="profileSection" style="display: none;"></div>
     </section>
 
     <!-- Pie de página -->
@@ -182,12 +187,15 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
+
     <!-- JavaScript personalizado -->
     <script src="js/script.js"></script>
 
     <!-- jQuery Enhancements -->
     <script src="js/jquery-enhancements.js"></script>
+
+    <!-- Autenticación local -->
+    <script src="js/auth.js"></script>
 </body>
 </html>
 

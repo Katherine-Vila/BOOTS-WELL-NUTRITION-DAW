@@ -1,176 +1,224 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre Nosotros - BOOST WELL NUTRITION</title>
-    
+
     <!-- CSS de Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
     <!-- Iconos de Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
     <!-- Fuentes de Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- CSS personalizado -->
-    <link rel="stylesheet" href="css/Styles.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="css/Styles.css" />
+  </head>
+  <body>
     <!-- Navegación -->
     <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid px-4">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="img/LOGO-sin fondo.png" alt="BOOST WELL NUTRITION Logo" class="logo-image">
-                <div class="brand-text">
-                    <span class="brand-name">BOOST WELL</span>
-                    <span class="brand-subtitle">NUTRITION</span>
-                </div>
+      <div class="container-fluid px-4">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="img/LOGO-sin fondo.png"
+            alt="BOOST WELL NUTRITION Logo"
+            class="logo-image"
+          />
+          <div class="brand-text">
+            <span class="brand-name">BOOST WELL</span>
+            <span class="brand-subtitle">NUTRITION</span>
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="productos.html">Ver Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="sobre-nosotros.html"
+                >Sobre Nosotros</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="seguimiento.html">Seguimiento</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reclamaciones.html">Reclamaciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contacto.html">Contacto</a>
+            </li>
+          </ul>
+
+          <div class="nav-icons">
+            <a href="carrito.html" class="icon-link">
+              <i class="bi bi-cart3"></i>
+              <span class="cart-badge" id="cartCount">0</span>
             </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="productos.html">Ver Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="sobre-nosotros.html">Sobre Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="seguimiento.html">Seguimiento</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="reclamaciones.html">Reclamaciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Contacto.html">Contacto</a>
-                    </li>
-                </ul>
-                
-                <div class="nav-icons">
-                    <a href="carrito.html" class="icon-link">
-                        <i class="bi bi-cart3"></i>
-                        <span class="cart-badge" id="cartCount">0</span>
-                    </a>
-                    <a href="cuenta.html" class="icon-link">
-                        <i class="bi bi-person"></i>
-                    </a>
-                </div>
-            </div>
+            <a href="cuenta.html" class="icon-link">
+              <i class="bi bi-person"></i>
+            </a>
+          </div>
         </div>
+      </div>
     </nav>
 
     <!-- About Section -->
     <section class="about-content-section">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="about-text-card">
-                        <h2 class="about-title">Sobre BOOST WELL NUTRITION</h2>
-                        
-                        <p class="about-paragraph">
-                            BOOST WELL NUTRITION es una marca salvadoreña que transforma ingredientes 
-                            naturales en bebidas funcionales y postres saludables. Nuestro compromiso es claro: 
-                            ofrecer opciones deliciosas, nutritivas y libres de azúcar refinada, pensadas para quienes 
-                            cuidan su cuerpo sin renunciar al placer de comer bien.
-                        </p>
-                        
-                        <p class="about-paragraph">
-                            Desde Antiguo Cuscatlán, trabajamos con pasión y precisión para crear recetas 
-                            innovadoras que se adaptan a estilos de vida activos, conscientes y diversos. Cada 
-                            producto refleja nuestra filosofía: bienestar accesible, sabor auténtico y transparencia 
-                            total en lo que consumes.
-                        </p>
-                        
-                        <h3 class="about-subtitle">¿Qué nos hace diferentes?</h3>
-                        
-                        <ul class="about-list">
-                            <li>Ingredientes reales, sin aditivos innecesarios</li>
-                            <li>Opciones sin gluten</li>
-                            <li>Recetas diseñadas para apoyar tu salud física y emocional</li>
-                            <li>Atención personalizada y enfoque local</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="col-lg-6">
-                    <div class="about-images-grid">
-                        <div class="about-image-item">
-                            <img src="img/Berry Bloom Latte.jpg" alt="Berry Bloom Latte" loading="lazy">
-                        </div>
-                        <div class="about-image-item">
-                            <img src="img/Shake Proteico.jpeg" alt="Shake Proteico" loading="lazy">
-                        </div>
-                        <div class="about-image-item">
-                            <img src="img/Cheescake.jpg" alt="Cheesecake de Fresa" loading="lazy">
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="about-text-card">
+              <h2 class="about-title">Sobre BOOST WELL NUTRITION</h2>
+
+              <p class="about-paragraph">
+                BOOST WELL NUTRITION es una marca salvadoreña que transforma
+                ingredientes naturales en bebidas funcionales y postres
+                saludables. Nuestro compromiso es claro: ofrecer opciones
+                deliciosas, nutritivas y libres de azúcar refinada, pensadas
+                para quienes cuidan su cuerpo sin renunciar al placer de comer
+                bien.
+              </p>
+
+              <p class="about-paragraph">
+                Desde Antiguo Cuscatlán, trabajamos con pasión y precisión para
+                crear recetas innovadoras que se adaptan a estilos de vida
+                activos, conscientes y diversos. Cada producto refleja nuestra
+                filosofía: bienestar accesible, sabor auténtico y transparencia
+                total en lo que consumes.
+              </p>
+
+              <h3 class="about-subtitle">¿Qué nos hace diferentes?</h3>
+
+              <ul class="about-list">
+                <li>Ingredientes reales, sin aditivos innecesarios</li>
+                <li>Opciones sin gluten</li>
+                <li>
+                  Recetas diseñadas para apoyar tu salud física y emocional
+                </li>
+                <li>Atención personalizada y enfoque local</li>
+              </ul>
             </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="about-images-grid">
+              <div class="about-image-item">
+                <img
+                  src="img/Berry Bloom Latte.jpg"
+                  alt="Berry Bloom Latte"
+                  loading="lazy"
+                />
+              </div>
+              <div class="about-image-item">
+                <img
+                  src="img/Shake Proteico.jpeg"
+                  alt="Shake Proteico"
+                  loading="lazy"
+                />
+              </div>
+              <div class="about-image-item">
+                <img
+                  src="img/Cheescake.jpg"
+                  alt="Cheesecake de Fresa"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Pie de página -->
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="footer-brand">
-                        <img src="img/LOGO-sin fondo.png" alt="BOOST WELL NUTRITION Logo" class="footer-logo">
-                        <div class="brand-text">
-                            <span class="brand-name">BOOST WELL</span>
-                            <span class="brand-subtitle">NUTRITION</span>
-                        </div>
-                    </div>
-                    <p class="footer-description">
-                        Transformando ingredientes naturales en deliciosas bebidas y alimentos saludables.
-                    </p>
-                </div>
-                
-                <div class="col-md-4 mb-4">
-                    <h5 class="footer-title">Enlaces Rápidos</h5>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="productos.html">Ver Productos</a></li>
-                        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-                        <li><a href="Contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-md-4 mb-4">
-                    <h5 class="footer-title">Contacto</h5>
-                    <ul class="footer-contact">
-                        <li><i class="bi bi-geo-alt"></i> Antiguo Cuscatlán, La Libertad, El Salvador</li>
-                        <li><i class="bi bi-whatsapp"></i> +503 7475-3562</li>
-                        <li><i class="bi bi-envelope"></i> flower.89045@gmail.com</li>
-                    </ul>
-                    <div class="social-links">
-                        <a href="https://wa.me/50374753562" target="_blank" title="Contáctanos por WhatsApp">
-                            <i class="bi bi-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="footer-brand">
+              <img
+                src="img/LOGO-sin fondo.png"
+                alt="BOOST WELL NUTRITION Logo"
+                class="footer-logo"
+              />
+              <div class="brand-text">
+                <span class="brand-name">BOOST WELL</span>
+                <span class="brand-subtitle">NUTRITION</span>
+              </div>
             </div>
-            
-            <hr class="footer-divider">
-            
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="footer-copyright">
-                        &copy; 2025 BOOST WELL NUTRITION. Todos los derechos reservados.
-                    </p>
-                </div>
+            <p class="footer-description">
+              Transformando ingredientes naturales en deliciosas bebidas y
+              alimentos saludables.
+            </p>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <h5 class="footer-title">Enlaces Rápidos</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="productos.html">Ver Productos</a></li>
+              <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+              <li><a href="Contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <h5 class="footer-title">Contacto</h5>
+            <ul class="footer-contact">
+              <li>
+                <i class="bi bi-geo-alt"></i> Antiguo Cuscatlán, La Libertad, El
+                Salvador
+              </li>
+              <li><i class="bi bi-whatsapp"></i> +503 7475-3562</li>
+              <li><i class="bi bi-envelope"></i> flower.89045@gmail.com</li>
+            </ul>
+            <div class="social-links">
+              <a
+                href="https://wa.me/50374753562"
+                target="_blank"
+                title="Contáctanos por WhatsApp"
+              >
+                <i class="bi bi-whatsapp"></i>
+              </a>
             </div>
+          </div>
         </div>
+
+        <hr class="footer-divider" />
+
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="footer-copyright">
+              &copy; 2025 BOOST WELL NUTRITION. Todos los derechos reservados.
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- JavaScript de Bootstrap -->
@@ -178,14 +226,14 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
+
     <!-- JavaScript personalizado -->
     <script src="js/script.js"></script>
 
     <!-- jQuery Enhancements -->
     <script src="js/jquery-enhancements.js"></script>
-</body>
+
+    <!-- Autenticación local -->
+    <script src="js/auth.js"></script>
+  </body>
 </html>
-
-
-
