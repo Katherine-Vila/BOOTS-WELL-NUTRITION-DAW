@@ -112,7 +112,7 @@
                     </div>
 
                     <div class="registration-card">
-                        <form class="registration-form">
+                        <form class="registration-form" id="registroForm" onsubmit="registrarUsuario(event)">
                             <div class="row">
                                 <div class="col-md-6">
                                     <h4 class="form-section-title">
@@ -121,22 +121,22 @@
                                     
                                     <div class="mb-3">
                                         <label class="form-label"><i class="bi bi-person"></i> Nombre</label>
-                                        <input type="text" class="form-control" placeholder="Nombre" required>
+                                        <input type="text" class="form-control" id="regNombre" placeholder="Nombre" required>
                                     </div>
                                     
                                     <div class="mb-3">
                                         <label class="form-label"><i class="bi bi-person"></i> Apellido</label>
-                                        <input type="text" class="form-control" placeholder="Apellidos" required>
+                                        <input type="text" class="form-control" id="regApellido" placeholder="Apellidos" required>
                                     </div>
                                     
                                     <div class="mb-3">
                                         <label class="form-label"><i class="bi bi-calendar-event"></i> Fecha de Nacimiento</label>
-                                        <input type="date" class="form-control" required>
+                                        <input type="date" class="form-control" id="regFechaNac" required>
                                     </div>
                                     
                                     <div class="mb-3">
                                         <label class="form-label"><i class="bi bi-telephone"></i> Número de Teléfono</label>
-                                        <input type="tel" class="form-control" placeholder="+503 XXXX-XXXX" required>
+                                        <input type="tel" class="form-control" id="regTelefono" placeholder="+503 XXXX-XXXX" required>
                                     </div>
                                 </div>
                                 
@@ -147,17 +147,17 @@
                                     
                                     <div class="mb-3">
                                         <label class="form-label"><i class="bi bi-envelope"></i> Correo Electrónico</label>
-                                        <input type="email" class="form-control" placeholder="tu@email.com" required>
+                                        <input type="email" class="form-control" id="regEmail" placeholder="tu@email.com" required>
                                     </div>
                                     
                                     <div class="mb-3">
                                         <label class="form-label"><i class="bi bi-lock"></i> Contraseña</label>
-                                        <input type="password" class="form-control" placeholder="Mínimo 8 caracteres" required>
+                                        <input type="password" class="form-control" id="regPassword" placeholder="Mínimo 6 caracteres" required>
                                     </div>
                                     
                                     <div class="mb-4">
                                         <label class="form-label"><i class="bi bi-lock-fill"></i> Confirmar contraseña</label>
-                                        <input type="password" class="form-control" placeholder="Confirmar contraseña" required>
+                                        <input type="password" class="form-control" id="regConfirmPassword" placeholder="Confirmar contraseña" required>
                                     </div>
 
                                     <div class="alert alert-success small">
@@ -247,12 +247,15 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
+
     <!-- JavaScript personalizado -->
     <script src="js/script.js"></script>
 
     <!-- jQuery Enhancements -->
     <script src="js/jquery-enhancements.js"></script>
+
+    <!-- Autenticación local -->
+    <script src="js/auth.js"></script>
 </body>
 </html>
 
