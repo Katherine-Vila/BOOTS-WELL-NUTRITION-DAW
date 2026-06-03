@@ -1,0 +1,98 @@
+[
+  {
+    "nombre": "Cheesecake de Fresa",
+    "precio": 3.0,
+    "imagen": "img/Cheescake.jpg",
+    "categoria": "Postre nutritivo",
+    "ingredientes": ["avena", "fresa", "yogurt griego", "miel"],
+    "beneficios": ["sin azucar refinada", "fuente de proteina", "energia ligera"]
+  },
+  {
+    "nombre": "Berry Bloom Latte",
+    "precio": 4.0,
+    "imagen": "img/Berry Bloom Latte.jpg",
+    "categoria": "Bebida funcional",
+    "ingredientes": ["frutos rojos", "leche vegetal", "colageno"],
+    "beneficios": ["antioxidantes", "hidratacion", "sabor natural"]
+  },
+  {
+    "nombre": "Cinnamon Boost",
+    "precio": 4.0,
+    "imagen": "img/Cinnamon Boost.jpg",
+    "categoria": "Bebida funcional",
+    "ingredientes": ["canela", "proteina", "leche vegetal"],
+    "beneficios": ["energia sostenida", "alto en proteina", "sin azucar refinada"]
+  },
+  {
+    "nombre": "VitalBerry Crunch",
+    "precio": 3.0,
+    "imagen": "img/VitalBerry Crunch.jpg",
+    "categoria": "Snack saludable",
+    "ingredientes": ["granola", "frutos rojos", "semillas", "miel"],
+    "beneficios": ["fibra", "textura crujiente", "snack nutritivo"]
+  },
+  {
+    "nombre": "NutriNest",
+    "precio": 3.75,
+    "imagen": "img/NutriNest.jpg",
+    "categoria": "Postre nutritivo",
+    "ingredientes": ["avena", "frutas", "semillas", "proteina vegetal"],
+    "beneficios": ["saciedad", "nutrientes naturales", "energia"]
+  },
+  {
+    "nombre": "Peach Spiral Bliss",
+    "precio": 4.0,
+    "imagen": "img/Peach Spiral Bliss.jpg",
+    "categoria": "Bebida funcional",
+    "ingredientes": ["durazno", "aloe", "colageno", "miel"],
+    "beneficios": ["hidratacion", "frescura", "bienestar digestivo"]
+  },
+  {
+    "nombre": "Tartaletas",
+    "precio": 3.5,
+    "imagen": "img/Mini Tartas Proteicas.jpeg",
+    "categoria": "Postre nutritivo",
+    "ingredientes": ["avena", "frutas naturales", "semillas", "proteina vegetal"],
+    "beneficios": ["alto en proteina", "sin azucar refinada", "ideal como snack"]
+  },
+  {
+    "nombre": "Bebida Energizante",
+    "precio": 4.0,
+    "imagen": "img/Bebida Energizante.jpeg",
+    "categoria": "Bebida funcional",
+    "ingredientes": ["aloe", "frutas frescas", "colageno"],
+    "beneficios": ["energia natural", "hidratacion", "revitalizante"]
+  },
+  {
+    "nombre": "Wafles Proteicos",
+    "precio": 3.75,
+    "imagen": "img/Wafles.jpeg",
+    "categoria": "Postre nutritivo",
+    "ingredientes": ["avena", "proteina", "fruta", "miel"],
+    "beneficios": ["proteina", "saciedad", "desayuno saludable"]
+  },
+  {
+    "nombre": "Capuchino Proteico",
+    "precio": 4.25,
+    "imagen": "img/Capuchino Proteico.jpeg",
+    "categoria": "Bebida proteica",
+    "ingredientes": ["cafe", "proteina", "leche vegetal"],
+    "beneficios": ["energia", "proteina", "sin azucar refinada"]
+  },
+  {
+    "nombre": "Shake Proteico",
+    "precio": 4.5,
+    "imagen": "img/Shake Proteico.jpeg",
+    "categoria": "Bebida proteica",
+    "ingredientes": ["proteina", "fruta", "leche vegetal"],
+    "beneficios": ["recuperacion", "alto en proteina", "saciedad"]
+  },
+  {
+    "nombre": "Yogurt Proteico",
+    "precio": 3.25,
+    "imagen": "img/Yogurt.jpeg",
+    "categoria": "Snack saludable",
+    "ingredientes": ["yogurt", "fruta", "granola", "semillas"],
+    "beneficios": ["proteina", "fibra", "ligero"]
+  }
+]

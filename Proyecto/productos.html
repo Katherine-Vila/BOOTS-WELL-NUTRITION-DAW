@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Productos - BOOST WELL NUTRITION</title>
+    
+    <!-- Icono de la página -->
+    <link rel="icon" type="image/png" href="img/LOGO-sin fondo.png">
+    
+    <!-- CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/Styles.css">
+</head>
+<body>
+    
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/LOGO-sin fondo.png" alt="BOOST WELL NUTRITION Logo" class="logo-image">
+                <div class="brand-text">
+                    <span class="brand-name">BOOST WELL</span>
+                    <span class="brand-subtitle">NUTRITION</span>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="productos.html">Ver Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="seguimiento.html">Seguimiento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reclamaciones.html">Reclamaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                
+                <div class="nav-icons">
+                    <a href="carrito.html" class="icon-link">
+                        <i class="bi bi-cart3"></i>
+                        <span class="cart-badge" id="cartCount">0</span>
+                    </a>
+                    <a href="cuenta.html" class="icon-link">
+                        <i class="bi bi-person"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de productos -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Todos Nuestros Productos</h2>
+            <p class="section-subtitle">Opciones saludables y deliciosas para tu bienestar</p>
+            
+            <div class="row g-4" id="productsGrid">
+                <!-- Producto 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card-simple">
+                        <div class="product-image-simple">
+                            <img src="img/Cheescake.jpg" alt="Cheesecake de Fresa" loading="lazy">
+                        </div>
+                        <div class="product-info-simple">
+                            <h4 class="product-name-simple">Cheesecake de Fresa</h4>
+                            <h3 class="product-price-simple">$3.00</h3>
+                            <button class="btn btn-secondary-custom" onclick="addToCart('Cheesecake de Fresa', 3.00, 'img/Cheescake.jpg')">
+                                <i class="bi bi-cart-plus"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card-simple">
+                        <div class="product-image-simple">
+                            <img src="img/Berry Bloom Latte.jpg" alt="Berry Bloom Latte" loading="lazy">
+                        </div>
+                        <div class="product-info-simple">
+                            <h4 class="product-name-simple">Berry Bloom Latte</h4>
+                            <h3 class="product-price-simple">$4.00</h3>
+                            <button class="btn btn-secondary-custom" onclick="addToCart('Berry Bloom Latte', 4.00, 'img/Berry Bloom Latte.jpg')">
+                                <i class="bi bi-cart-plus"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card-simple">
+                        <div class="product-image-simple">
+                            <img src="img/Cinnamon Boost.jpg" alt="Cinnamon Boost" loading="lazy">
+                        </div>
+                        <div class="product-info-simple">
+                            <h4 class="product-name-simple">Cinnamon Boost</h4>
+                            <h3 class="product-price-simple">$4.00</h3>
+                            <button class="btn btn-secondary-custom" onclick="addToCart('Cinnamon Boost', 4.00, 'img/Cinnamon Boost.jpg')">
+                                <i class="bi bi-cart-plus"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card-simple">
+                        <div class="product-image-simple">
+                            <img src="img/VitalBerry Crunch.jpg" alt="VitalBerry Crunch" loading="lazy">
+                        </div>
+                        <div class="product-info-simple">
+                            <h4 class="product-name-simple">VitalBerry Crunch</h4>
+                            <h3 class="product-price-simple">$3.00</h3>
+                            <button class="btn btn-secondary-custom" onclick="addToCart('VitalBerry Crunch', 3.00, 'img/VitalBerry Crunch.jpg')">
+                                <i class="bi bi-cart-plus"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card-simple">
+                        <div class="product-image-simple">
+                            <img src="img/NutriNest.jpg" alt="NutriNest" loading="lazy">
+                        </div>
+                        <div class="product-info-simple">
+                            <h4 class="product-name-simple">NutriNest</h4>
+                            <h3 class="product-price-simple">$3.75</h3>
+                            <button class="btn btn-secondary-custom" onclick="addToCart('NutriNest', 3.75, 'img/NutriNest.jpg')">
+                                <i class="bi bi-cart-plus"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card-simple">
+                        <div class="product-image-simple">
+                            <img src="img/Peach Spiral Bliss.jpg" alt="Peach Spiral Bliss" loading="lazy">
+                        </div>
+                        <div class="product-info-simple">
+                            <h4 class="product-name-simple">Peach Spiral Bliss</h4>
+                            <h3 class="product-price-simple">$4.00</h3>
+                            <button class="btn btn-secondary-custom" onclick="addToCart('Peach Spiral Bliss', 4.00, 'img/Peach Spiral Bliss.jpg')">
+                                <i class="bi bi-cart-plus"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 7 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card-simple">
+                        <div class="product-image-simple">
+                            <img src="img/Mini Tartas Proteicas.jpeg" alt="Tartaletas" loading="lazy">
+                        </div>
+                        <div class="product-info-simple">
+                            <h4 class="product-name-simple">Tartaletas</h4>
+                            <h3 class="product-price-simple">$3.50</h3>
+                            <button class="btn btn-secondary-custom" onclick="addToCart('Tartaletas', 3.50, 'img/Mini Tartas Proteicas.jpeg')">
+                                <i class="bi bi-cart-plus"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 8 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card-simple">
+                        <div class="product-image-simple">
+                            <img src="img/Bebida Energizante.jpeg" alt="Bebida Energizante" loading="lazy">
+                        </div>
+                        <div class="product-info-simple">
+                            <h4 class="product-name-simple">Bebida Energizante</h4>
+                            <h3 class="product-price-simple">$4.00</h3>
+                            <button class="btn btn-secondary-custom" onclick="addToCart('Bebida Energizante', 4.00, 'img/Bebida Energizante.jpeg')">
+                                <i class="bi bi-cart-plus"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 9 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card-simple">
+                        <div class="product-image-simple">
+                            <img src="img/Wafles.jpeg" alt="Wafles Proteicos" loading="lazy">
+                        </div>
+                        <div class="product-info-simple">
+                            <h4 class="product-name-simple">Wafles Proteicos</h4>
+                            <h3 class="product-price-simple">$3.75</h3>
+                            <button class="btn btn-secondary-custom" onclick="addToCart('Wafles Proteicos', 3.75, 'img/Wafles.jpeg')">
+                                <i class="bi bi-cart-plus"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 10 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card-simple">
+                        <div class="product-image-simple">
+                            <img src="img/Capuchino Proteico.jpeg" alt="Capuchino Proteico" loading="lazy">
+                        </div>
+                        <div class="product-info-simple">
+                            <h4 class="product-name-simple">Capuchino Proteico</h4>
+                            <h3 class="product-price-simple">$4.25</h3>
+                            <button class="btn btn-secondary-custom" onclick="addToCart('Capuchino Proteico', 4.25, 'img/Capuchino Proteico.jpeg')">
+                                <i class="bi bi-cart-plus"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 11 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card-simple">
+                        <div class="product-image-simple">
+                            <img src="img/Shake Proteico.jpeg" alt="Shake Proteico" loading="lazy">
+                        </div>
+                        <div class="product-info-simple">
+                            <h4 class="product-name-simple">Shake Proteico</h4>
+                            <h3 class="product-price-simple">$4.50</h3>
+                            <button class="btn btn-secondary-custom" onclick="addToCart('Shake Proteico', 4.50, 'img/Shake Proteico.jpeg')">
+                                <i class="bi bi-cart-plus"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 12 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card-simple">
+                        <div class="product-image-simple">
+                            <img src="img/Yogurt.jpeg" alt="Yogurt Proteico" loading="lazy">
+                        </div>
+                        <div class="product-info-simple">
+                            <h4 class="product-name-simple">Yogurt Proteico</h4>
+                            <h3 class="product-price-simple">$3.25</h3>
+                            <button class="btn btn-secondary-custom" onclick="addToCart('Yogurt Proteico', 3.25, 'img/Yogurt.jpeg')">
+                                <i class="bi bi-cart-plus"></i> Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <p class="text-muted">¿No encuentras lo que buscas? <a href="Contacto.html" class="text-decoration-none">Contáctanos</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="footer-brand">
+                        <img src="img/LOGO-sin fondo.png" alt="BOOST WELL NUTRITION Logo" class="footer-logo">
+                        <div class="brand-text">
+                            <span class="brand-name">BOOST WELL</span>
+                            <span class="brand-subtitle">NUTRITION</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Transformando ingredientes naturales en deliciosas bebidas y alimentos saludables.
+                    </p>
+                    <div class="footer-stats">
+                        <div class="stat-item">
+                            <h4>500+</h4>
+                            <p>Clientes Felices</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>15+</h4>
+                            <p>Productos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Enlaces Rápidos</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Ver Productos</a></li>
+                        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="Contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <h5 class="footer-title">Contacto</h5>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-geo-alt"></i> Antiguo Cuscatlán, La Libertad, El Salvador</li>
+                        <li><i class="bi bi-whatsapp"></i> +503 7475-3562</li>
+                        <li><i class="bi bi-envelope"></i> flower.89045@gmail.com</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://wa.me/50374753562" target="_blank" title="Contáctanos por WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="footer-copyright">
+                        &copy; 2025 BOOST WELL NUTRITION. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- JavaScript personalizado -->
+    <script src="js/script.js"></script>
+
+    <!-- jQuery Enhancements -->
+    <script src="js/jquery-enhancements.js"></script>
+</body>
+</html>
+
+
